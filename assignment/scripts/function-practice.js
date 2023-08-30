@@ -4,28 +4,42 @@ console.log('***** Function Practice *****');
 // After _each_ function, use a console log to call the function
 // to test it and display the result
 
+// DOM document selectors, although I imagine there's a more efficient way to do this
+// let question1 = document.querySelector('#question1');
+// let question2 = document.querySelector('#question2');
+// let question3 = document.querySelector('#question3');
+// let question4 = document.querySelector('#question4');
+// let question5 = document.querySelector('#question5');
+
+
 // 1. Function to return 'Hello World!'
 function hello() {
   return 'Hello World!';
 }
 // Call the function to test
 console.log('Test - should say "Hello World!"', hello());
-hello();
+question1.innerHTML = hello();
 
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
+
 function helloName(name) {
   return (`Hello, ${name}!`);
 }
+
 // Remember to call the function to test
 console.log(helloName('Chris'));
+question2.innerHTML = helloName('Chris');
 
 // 3. Function to add two numbers together & return the result
 function addNumbers(firstNumber, secondNumber) {
   // return firstNumber + secondNumber;
   return firstNumber + secondNumber
 }
-console.log(addNumbers(7, 3));
+question3.innerHTML = 'addNumbers(7, 3) <br>' + addNumbers(7, 3);
+//OOOOH THIS IS MUCH EASIER!
+console.log(question3.innerHTML); // should be 10
+
 
 
 // 4. Function to multiply three numbers & return the result
@@ -33,7 +47,8 @@ function multiplyThree(firstNum, secondNum, thirdNum) {
   return firstNum * secondNum * thirdNum;
 }
 
-console.log(multiplyThree(4, 2, 3));
+question4.innerHTML = 'multiplyThree(4, 2, 3) <br>' + multiplyThree(4, 2, 3);
+console.log(question4.innerHTML); // should be 24
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
@@ -45,8 +60,11 @@ function isPositive(number) {
 }
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
-console.log(isPositive(-4));
-console.log(isPositive(18));
+question5.innerHTML = 'isPositive(-4) <br>' + isPositive(-4) + '<br> isPositive(18) <br>' + isPositive(18);
+
+// And now I see the limitations of using the query selector variable inside of the console log!
+console.log(isPositive(-4)); // should be false
+console.log(isPositive(18)); // should be true
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
@@ -54,7 +72,8 @@ function getLast(array) {
   return array[array.length - 1];
 }
 testArray = [2, 3, 10, 14, 'this is the last item in the array'];
-console.log(getLast(testArray));
+question6.innerHTML = 'getLast(testArray) <br>' + getLast(testArray);
+console.log(getLast(testArray)); // should be "this is the last item in the array"
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
@@ -70,6 +89,7 @@ function find(value, array) {
     }
   } return containsValue;
 }
+question7.innerHTML = 'find(10, testArray) <br.' + find(10, testArray);
 console.log(find(2, testArray)); // Should be true
 console.log(find(47, testArray)); // Should be false
 console.log(find(10, testArray)); // Should be true
@@ -86,9 +106,9 @@ function isFirstLetter(letter, string) {
       return false;
     }
 }
-
-console.log('Does the letter start the string:', isFirstLetter('t', 'there'));
-console.log('Does the letter start the string:', isFirstLetter('w', 'happy'));
+question8.innerHTML = "isFirstLetter('w', 'happy') <br>" + isFirstLetter('w', 'happy');
+console.log('Does the letter start the string:', isFirstLetter('t', 'there')); // should output true
+console.log('Does the letter start the string:', isFirstLetter('w', 'happy')); // should output false
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll(numbers) {
@@ -104,6 +124,7 @@ function sumAll(numbers) {
 let sumArray = [4, 7, 20, 13, 15]; // total is 59
 let smallArray = [1, 2, 3]; // total is 6
 
+question9.innerHTML = 'sumArray = [4, 7, 20, 13, 15] <br> sumAll(sumArray) <br>' + sumAll(sumArray);
 console.log(sumAll(sumArray));
 console.log(sumAll(smallArray));
 
@@ -121,11 +142,26 @@ function allPositive(numArray) {
 
 let testNumArray = [6, 4, -3, 4, -1, 9];
 
+question10.innerHTML = 'testNumArray = [6, 4, -3, 4, -1, 9] <br> allPositives(testNumArray) <br>' + allPositive(testNumArray);
 console.log(allPositive(testNumArray)); // output should be [6, 4, 4, 9]
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+
+// The edabit challenge to add up the numbers of a single input (ie if the input is 4,
+// add up 4 + 3 + 2 + 1)
+
+function addUp(num) {
+  let total = 0;
+  while (num > 0) {
+    total += num;
+    num--;
+  }
+  return total;
+}
+question11.innerHTML = 'Edabit problem adding a number addUp(10) <br>' + addUp(10);
+console.log(addUp(10)); //
 
 
 // DO NOT MODIFY
