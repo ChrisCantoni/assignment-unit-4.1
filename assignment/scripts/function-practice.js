@@ -5,12 +5,17 @@ console.log('***** Function Practice *****');
 // to test it and display the result
 
 // DOM document selectors, although I imagine there's a more efficient way to do this
-// let question1 = document.querySelector('#question1');
-// let question2 = document.querySelector('#question2');
-// let question3 = document.querySelector('#question3');
-// let question4 = document.querySelector('#question4');
-// let question5 = document.querySelector('#question5');
-
+let question1 = document.querySelector('#question1');
+let question2 = document.querySelector('#question2');
+let question3 = document.querySelector('#question3');
+let question4 = document.querySelector('#question4');
+let question5 = document.querySelector('#question5');
+let question6 = document.querySelector('#question6');
+let question7 = document.querySelector('#question7');
+let question8 = document.querySelector('#question8');
+let question9 = document.querySelector('#question9');
+let question10 = document.querySelector('#question10');
+let question11 = document.querySelector('#question11');
 
 // 1. Function to return 'Hello World!'
 function hello() {
@@ -149,7 +154,7 @@ console.log(allPositive(testNumArray)); // output should be [6, 4, 4, 9]
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
 
-// The edabit challenge to add up the numbers of a single input (ie if the input is 4,
+// The edabit challenge was to add up the numbers of a single input (ie if the input is 4,
 // add up 4 + 3 + 2 + 1)
 
 function addUp(num) {
