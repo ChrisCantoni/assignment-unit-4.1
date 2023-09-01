@@ -42,7 +42,7 @@ function addNumbers(firstNumber, secondNumber) {
   return firstNumber + secondNumber
 }
 question3.innerHTML = 'addNumbers(7, 3) <br>' + addNumbers(7, 3);
-//OOOOH THIS IS MUCH EASIER!
+//OOOOH THIS IS MUCH EASIER! Put the inner HTML inside the console log.
 console.log(question3.innerHTML); // should be 10
 
 
